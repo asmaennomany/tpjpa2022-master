@@ -1,4 +1,4 @@
-# Template de projet pour le TP JPA 2021 UniR
+# Compte rendu
 
 1. Conception:
   
