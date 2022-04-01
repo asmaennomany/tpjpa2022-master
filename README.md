@@ -2,36 +2,36 @@
 
 1. Conception:
   
-  les classes : Fiche, FicheResquest, FicheBugs, KanbanBoard, Section, Utilisateur.
+  Les classes : Fiche, FicheResquest, FicheBugs, KanbanBoard, Section, Utilisateur.
   
-  description:  un fiche peut avoir deux types ( request ou bugs ), 
+  Description:  un fiche peut avoir deux types ( request ou bugs ), 
    
    ### TP 2 to 4 ##########
 
 1. Conception:
   
-  * les classes : Fiche, FicheResquest, FicheBugs, KanbanBoard, Section, Utilisateur.
+  * Les classes : Fiche, FicheResquest, FicheBugs, KanbanBoard, Section, Utilisateur.
   
-  * description:  
+  * Description:  
     
-     . un fiche peut avoir deux types ( request ou bugs ): Heritage
-     . un fiche doit etre dans une section(en attente, en cours, ou réalisé): ManyToOne
-     . KanbanBoard peut avoir plusieurs fiches: OneToMany
+     . une Fiche peut avoir deux types ( request ou bugs ): Héritage
+     . une Fiche doit être dans une section (en attente, en cours, ou réalisé): ManyToOne
+     . KanbanBoard peut avoir plusieurs Fiches: OneToMany
      . KanbanBoard peut affceter à un ustilsateur: OneToMany
 
-   * les couches:
+   * Les couches:
       
-      . trois couches: une pour business contient les entities, l'autre pour le Dao pour séparer le code métier code propres, et une choucge de service.
+      . Trois couches: une pour business contient les entités, l'autre pour le Dao pour séparer le code métier code propre, et une couche de service.
 
-2. Realisation:
+2. Réalisation:
 
-   * nous avons cré l'entité de chaque classe.
-   * nous avons cré la classe Dao de chaque entité
-   * nous avons peuplé la base données à partir une classe dans la couche de service on utilisant la methode save des classes Dao
-   * nous avons cré des methodes pour les requetes dans les classes Dao
-   * nous avons utilisé ces methodes dans la couche services
+   * Nous avons créé l'entité de chaque classe.
+   * Nous avons créé la classe Dao de chaque entité
+   * Nous avons peuplé la base de données à partir d'une classe dans la couche de service on utilisant la methode Save des classes Dao
+   * Nous avons créé des méthodes pour les requêtes dans les classes Dao
+   * Nous avons utilisé ces méthodes dans la couche services
 
-3. problème de N+1 Select
+3. Problème de N+1 Select
    
    * N1select 
      . temps d'exectuion : 5920 ,  
@@ -41,3 +41,11 @@
      . requets: 1
     
     JoinFetch est plus performantes par rapport N1select
+
+### TP 5 ##########
+    * Pour lancer le TP 5, nous avons ajouté dans le fichier pom.xml le package WAR et la dépendance de la Servlet.
+    * Nous avons créé une couche de la Servlet
+    * Nous avons inséré les resources statiques : Création du répertoire /src/amin/webapp et nous avons ajouté le fichier index.html dans ce répertoire.
+    * Nous avons créé notre première Classe Servlet avec deux méthode : doGet et doPost
+    * Nous avons créé un formulaire et une autre Classe Servlet UserInfo
+  
